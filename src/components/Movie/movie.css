@@ -1,0 +1,28 @@
+.titulo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: baseline;
+}
+.titulo h1 {
+  width: 15%;
+}
+.titulo h2 {
+  color: red;
+  width: 30%;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.listado {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.liiplot {
+  display: flex;
+  text-align: right;
+}

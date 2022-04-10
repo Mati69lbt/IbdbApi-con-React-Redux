@@ -7,8 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   return (
-    <div style={{ textAlign: "center" }}>
-      <h1>Películas</h1>
+    <div style={{ margin: "2%" }}>
       <NavBar />
       <Routes>
         <Route path="/" element={<Buscador />} />

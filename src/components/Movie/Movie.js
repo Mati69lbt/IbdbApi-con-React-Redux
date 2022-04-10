@@ -34,41 +34,57 @@ const Movie = () => {
 
   return (
     <div>
-      <h1>Movie</h1>
-      <h2>{Title}</h2>
-      <ul>
-        <li>
-          Raiting: <i>{imdbRating}</i>
-        </li>
-        <li>
-          Votos: <i>{imdbVotes} </i>
-        </li>
-        <li>
-          Duracion: <i>{Runtime}</i>
-        </li>
-        <li>
-          Estreno: <i>{Released}</i>
-        </li>
-      </ul>
-      <p>{Plot}</p>
-      <ul>
-        <li>
-          Director: <span>{Director} </span>
-        </li>
-        <li>
-          Actores: <span>{Actors}</span>
-        </li>
-        <li>
-          Género: <span>{Genre}</span>
-        </li>
-        <li>
-          Pais: <span>{Country}</span>
-        </li>
-        <li>
-          Idioma: <span>{Language}</span>
-        </li>
-      </ul>
-      <img src={Poster} alt={Title} />
+      <div class="titulo">
+        <h1>Movie:</h1>
+        <h2>{Title}</h2>
+      </div>
+      <div class="flex-container">
+        <div class="flex-item">
+          <ul className="listado">
+            <li>
+              <b>Raiting:</b>
+              <i>{imdbRating}</i>
+            </li>
+            <li>
+              <b>Votos:</b> <i>{imdbVotes} </i>
+            </li>
+            <li>
+              <b>Duración:</b>
+              <i>{Runtime}</i>
+            </li>
+            <li>
+              <b>Estreno:</b>
+              <i>{Released}</i>
+            </li>
+            <li className="liplot">
+              <i>{Plot} </i>
+            </li>
+            <li>
+              <b>Director:</b>
+              <span>{Director} </span>
+            </li>
+            <li>
+              <b>Actores:</b>
+              <span>{Actors}</span>
+            </li>
+            <li>
+              <b>Género:</b>
+              <span>{Genre}</span>
+            </li>
+            <li>
+              <b>Pais:</b>
+              <span>{Country}</span>
+            </li>
+            <li>
+              <b>Idioma:</b>
+              <span>{Language}</span>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-item">
+          <img src={Poster} alt={Title} />
+        </div>
+      </div>
     </div>
   );
 };
