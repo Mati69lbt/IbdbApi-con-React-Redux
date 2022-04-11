@@ -1,6 +1,6 @@
 # Proyecto de Peliculas OMDb API
 
-Se creo un pequeño proyecto para buscar peliculas, ver su informacion y guardarlas en favoritos
+Se creo un pequeño proyecto en REACT-REDUX para buscar peliculas, ver su informacion y guardarlas en favoritos
 
 1. Instalar dependencias
 2. Crear las carpetas con los componentes
