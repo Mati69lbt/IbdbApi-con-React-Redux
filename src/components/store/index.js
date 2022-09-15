@@ -6,8 +6,6 @@ import movie from "../reducers";
 const composedEnhancer = composeWithDevTools(applyMiddleware(thunkMiddleware));
 
 const store = createStore(movie, composedEnhancer);
-store.subscribe(() => {
-  //console.log(store);
-});
+store.subscribe(() => {});
 
 export default store;

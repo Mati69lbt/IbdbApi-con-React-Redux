@@ -7,7 +7,7 @@ import "./favorites.css";
 const Favorites = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  console.log(state.moviesFavourites);
+
   return (
     <div>
       <div class="tituloo">

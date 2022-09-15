@@ -40,8 +40,6 @@ export default function movieReducer(state = initialState, action) {
             moviesFavourites: [...state.moviesFavourites, newMovie],
           };
     case REMOVE_MOVIE_FAVORITE: {
-      console.log(state.moviesFavourites);
-      console.log(action.payload);
       return {
         ...state,
         moviesFavourites: state.moviesFavourites.filter(

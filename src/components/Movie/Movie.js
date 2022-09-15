@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { get_Movie_Details } from "../actions";
 import "./movie.css";
 const Movie = () => {
   const movieID = useParams();
-  console.log(movieID);
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  console.log(state.movieDetail);
+
   const {
     Title,
     imdbRating,

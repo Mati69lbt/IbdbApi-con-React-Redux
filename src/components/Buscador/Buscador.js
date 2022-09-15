@@ -21,7 +21,7 @@ const Buscador = () => {
 
   return (
     <div>
-      <div class="inicio">
+      <div className="inicio">
         <h2>Buscador: </h2>
         <form onSubmit={(e) => handleSubmit(e)}>
           <input
