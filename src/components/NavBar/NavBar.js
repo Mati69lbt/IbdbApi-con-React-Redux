@@ -24,7 +24,7 @@ const NavBar = () => {
         <li>
           {" "}
           <NavLink to="/favs" className="nl">
-            Favoritas
+            Favorita0s
           </NavLink>
         </li>
       </ul>
