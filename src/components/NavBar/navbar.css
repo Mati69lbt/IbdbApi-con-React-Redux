@@ -32,3 +32,13 @@ hr {
   color: black;
   border: solid;
 }
+
+@media (max-width: 576px) {
+  li {
+    padding: 0;
+  }
+  .inicio {
+    display: flex;
+    flex-direction: column;
+  }
+}

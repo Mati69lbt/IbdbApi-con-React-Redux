@@ -23,3 +23,9 @@
 h2 {
   width: 15%;
 }
+
+@media (max-width: 576px) {
+  a {
+    font-size: 15px;
+  }
+}

@@ -26,3 +26,24 @@
   display: flex;
   text-align: right;
 }
+
+@media (max-width: 576px) {
+  .titulo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .titulo h1 {
+    font-size: 30px;
+  }
+  .titulo h2 {
+    font-size: 20px;
+  }
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .listado {
+    align-items: flex-start;
+  }
+}
