@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import "./App.css";
+
 import Buscador from "./components/Buscador/Buscador";
 import Favorites from "./components/Favorites/Favorites";
 import Movie from "./components/Movie/Movie";
