@@ -24,6 +24,11 @@ export default function movieReducer(state = initialState, action) {
         ...state,
         movieDetail: action.payload,
       };
+    case "CLEAR_MOVIE_DETAILS":
+      return {
+        ...state,
+        movieDetail: {},
+      };
 
     case ADD_MOVIE_FAVORITE:
       let newMovie = state.moviesLoaded.find(

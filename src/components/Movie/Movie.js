@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { get_Movie_Details } from "../actions";
@@ -23,22 +23,41 @@ const Movie = () => {
     Country,
   } = state.movieDetail;
 
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    try {
-      dispatch(get_Movie_Details(movieID));
-    } catch (error) {
-      console.log(error);
-    }
+    dispatch(get_Movie_Details(movieID))
+      .then(() => {
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoading(false);
+      });
+
+    return () => {
+      dispatch({ type: "CLEAR_MOVIE_DETAILS" });
+    };
   }, [dispatch, movieID]);
+
+  if (isLoading) {
+    return (
+      <div className="loading-container">
+        <div className="loading-text">
+          <b>Loading...</b>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
-      <div class="titulo">
+      <div className="titulo">
         <h1>Movie:</h1>
         <h2>{Title}</h2>
       </div>
-      <div class="flex-container">
-        <div class="flex-item">
+      <div className="flex-container">
+        <div className="flex-item">
           <ul className="listado">
             <li>
               <b>Raiting:</b>
@@ -80,7 +99,7 @@ const Movie = () => {
             </li>
           </ul>
         </div>
-        <div class="flex-item">
+        <div className="flex-item">
           <img src={Poster} alt={Title} />
         </div>
       </div>

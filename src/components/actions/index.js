@@ -15,6 +15,10 @@ export function getMovies(title) {
   };
 }
 
+export const clearMovieDetails = () => ({
+  type: "CLEAR_MOVIE_DETAILS",
+});
+
 export function get_Movie_Details(id) {
   var aa = Object.values(id);
   return async function (dispatch) {
