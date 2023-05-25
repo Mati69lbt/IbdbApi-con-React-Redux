@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-// import Boca from "./static/media";
+import Boca from "../../img/boca.png";
 import "./navbar.css";
 const NavBar = () => {
   return (
@@ -8,11 +8,7 @@ const NavBar = () => {
       <ul>
         <li>
           <Link to="/">
-            <img
-              src={"./static/media/boca.3b32ec283e94c9951e50.png"}
-              alt="boca"
-              height={50}
-            />
+            <img src={Boca} alt="boca" height={50} />
           </Link>
         </li>
         <li>

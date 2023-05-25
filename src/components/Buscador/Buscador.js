@@ -39,39 +39,45 @@ const Buscador = () => {
         </form>
       </div>
 
-      <div className="imb">
-        <article>Poster</article>
-        <article>Pelicula</article>
-        <article>Fav</article>
-      </div>
-      {state.moviesLoaded &&
-        state.moviesLoaded.map((movie) => (
-          <div key={movie.imdbID} className="imb">
-            <article>
-              <img src={movie.Poster} alt={movie.title} height={120} />
-            </article>
-            <article>
-              {" "}
-              <Link to={`/movie/${movie.imdbID}`}>{movie.Title}</Link>
-            </article>
-            <article>
-              {" "}
-              <button
-                className="nl"
-                onClick={() =>
-                  dispatch(
-                    add_Movie_Favorite({
-                      title: movie.Title,
-                      id: movie.imdbID,
-                    })
-                  )
-                }
-              >
-                Favs
-              </button>
-            </article>
+      {!state.moviesLoaded || state.moviesLoaded.length === 0 ? (
+        <h1 className="bup">Buscate una Peli!!</h1>
+      ) : (
+        <>
+          <div className="imb">
+            <article>Poster</article>
+            <article>Pelicula</article>
+            <article>Fav</article>
           </div>
-        ))}
+          {state.moviesLoaded &&
+            state.moviesLoaded.map((movie) => (
+              <div key={movie.imdbID} className="imb">
+                <article>
+                  <img src={movie.Poster} alt={movie.title} height={120} />
+                </article>
+                <article>
+                  {" "}
+                  <Link to={`/movie/${movie.imdbID}`}>{movie.Title}</Link>
+                </article>
+                <article>
+                  {" "}
+                  <button
+                    className="nl"
+                    onClick={() =>
+                      dispatch(
+                        add_Movie_Favorite({
+                          title: movie.Title,
+                          id: movie.imdbID,
+                        })
+                      )
+                    }
+                  >
+                    Favs
+                  </button>
+                </article>
+              </div>
+            ))}
+        </>
+      )}
     </div>
   );
 };
